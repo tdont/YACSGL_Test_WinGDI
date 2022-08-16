@@ -185,16 +185,16 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 
             // TODO: Ajoutez ici le code de dessin qui utilise hdc...
-            //YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X-1, VIRTUAL_FRAME_Y-1, YACSGL_P_WHITE);
-            //YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X / 2, VIRTUAL_FRAME_Y-1, YACSGL_P_WHITE);
-            //YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X / 3, VIRTUAL_FRAME_Y-1, YACSGL_P_WHITE);
-            //YACSGL_line(&frame, 0, 0, (VIRTUAL_FRAME_X * 2) / 3, VIRTUAL_FRAME_Y-1, YACSGL_P_WHITE);
+            YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X-1, VIRTUAL_FRAME_Y-1, YACSGL_P_WHITE);
+            YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X / 2, VIRTUAL_FRAME_Y-1, YACSGL_P_WHITE);
+            YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X / 3, VIRTUAL_FRAME_Y-1, YACSGL_P_WHITE);
+            YACSGL_line(&frame, 0, 0, (VIRTUAL_FRAME_X * 2) / 3, VIRTUAL_FRAME_Y-1, YACSGL_P_WHITE);
 
-            //YACSGL_line(&frame, 0, 0, 0, VIRTUAL_FRAME_Y - 1, YACSGL_P_WHITE);
-            //YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X - 1, 0, YACSGL_P_WHITE);
-            //YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y / 2, YACSGL_P_WHITE);
-            //YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y / 3, YACSGL_P_WHITE);
-            //YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X - 1, (VIRTUAL_FRAME_Y*2) / 3, YACSGL_P_WHITE);
+            YACSGL_line(&frame, 0, 0, 0, VIRTUAL_FRAME_Y - 1, YACSGL_P_WHITE);
+            YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X - 1, 0, YACSGL_P_WHITE);
+            YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y / 2, YACSGL_P_WHITE);
+            YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y / 3, YACSGL_P_WHITE);
+            YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X - 1, (VIRTUAL_FRAME_Y*2) / 3, YACSGL_P_WHITE);
 
             //YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X, 0, YACSGL_P_WHITE);
 
@@ -202,8 +202,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             //YACSGL_rect_line(&frame, 0, 0, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y - 1, YACSGL_P_WHITE);
 
-            YACSGL_rect_fill(&frame, 1, 1, 30, 30, YACSGL_P_WHITE);
+            YACSGL_rect_line(&frame, 10, 10, 19, 19, YACSGL_P_WHITE);
 
+            YACSGL_rect_fill(&frame, 30, 30, 39, 39, YACSGL_P_WHITE);
+
+            //YACSGL_rect_fill(&frame, 0, 0, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y - 1, YACSGL_P_WHITE);
+
+            //YACSGL_rect_fill(&frame, 0, 0, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y - 1, YACSGL_P_BLACK);
+
+            /* Draw the prepare frame buffer */
             for (uint16_t y = 0; y < VIRTUAL_FRAME_Y; y++)
             {
                 for (uint16_t x = 0; x < VIRTUAL_FRAME_X; x++)
