@@ -11,6 +11,9 @@
 #define VIRTUAL_FRAME_X     264
 #define VIRTUAL_FRAME_Y     176
 
+//#define VIRTUAL_FRAME_X     1024
+//#define VIRTUAL_FRAME_Y     768
+
 // Variables globales :
 HINSTANCE hInst;                                // instance actuelle
 WCHAR szTitle[MAX_LOADSTRING];                  // Texte de la barre de titre
@@ -157,7 +160,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             HBRUSH				brushWhite;
             HPEN				penWhite, penBlack, penRed;
-            HBITMAP				bufBMP, bufBMP2;
             HBITMAP				bufferBMP, blankBMP;
 
             penWhite = CreatePen(PS_SOLID, 1, RGB(255, 255, 255));
@@ -205,6 +207,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             YACSGL_rect_line(&frame, 10, 10, 19, 19, YACSGL_P_WHITE);
 
             YACSGL_rect_fill(&frame, 30, 30, 39, 39, YACSGL_P_WHITE);
+
+            YACSGL_circle_line(&frame, 50, 50, 30, YACSGL_P_WHITE);
+
+            YACSGL_circle_fill(&frame, 80, 80, 30, YACSGL_P_WHITE);
 
             //YACSGL_rect_fill(&frame, 0, 0, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y - 1, YACSGL_P_WHITE);
 
