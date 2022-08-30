@@ -5,6 +5,8 @@
 #include "TestProjectYACSGL.h"
 #include "YACSGL.h"
 #include "YACSGL_pixel.h"
+#include "YACSGL_font_5x7.h"
+#include "YACSGL_font.h"
 
 #define MAX_LOADSTRING 100
 
@@ -211,6 +213,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             YACSGL_circle_line(&frame, 50, 50, 30, YACSGL_P_WHITE);
 
             YACSGL_circle_fill(&frame, 80, 80, 30, YACSGL_P_WHITE);
+
+            YACSGL_font_txt_disp(&frame, 100, 100, YACSGL_P_WHITE, &YACSGL_font_5x7, "This is a test", YACSGL_NEWLINE_DISABLED);
+
+            YACSGL_rect_line(&frame, 50, 50, 1000, 1000, YACSGL_P_WHITE);
 
             //YACSGL_rect_fill(&frame, 0, 0, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y - 1, YACSGL_P_WHITE);
 
