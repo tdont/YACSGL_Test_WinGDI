@@ -27,7 +27,9 @@ BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
 
-static uint8_t frame_buffer[(VIRTUAL_FRAME_X * VIRTUAL_FRAME_Y) / 8] = { 0 };
+static uint8_t frame_buffer_2D[VIRTUAL_FRAME_Y][VIRTUAL_FRAME_X / 8] = { 0 };
+static uint8_t* frame_buffer = (uint8_t*)frame_buffer_2D;
+//static uint8_t frame_buffer[(VIRTUAL_FRAME_X * VIRTUAL_FRAME_Y) / 8] = { 0 };
 YACSGL_frame_t  frame{ VIRTUAL_FRAME_X, VIRTUAL_FRAME_Y, frame_buffer };
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
@@ -217,6 +219,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             YACSGL_font_txt_disp(&frame, 100, 100, YACSGL_P_WHITE, &YACSGL_font_5x7, "This is a test", YACSGL_NEWLINE_DISABLED);
 
             YACSGL_rect_line(&frame, 50, 50, 1000, 1000, YACSGL_P_WHITE);
+
+			YACSGL_rect_fill(&frame, 100, 100, VIRTUAL_FRAME_X, 110, YACSGL_P_WHITE);
+
+			YACSGL_rect_fill(&frame, 150, 150, 160, VIRTUAL_FRAME_Y, YACSGL_P_WHITE);
+
+			YACSGL_rect_line(&frame, 170, 170, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y - 1, YACSGL_P_WHITE);
 
             //YACSGL_rect_fill(&frame, 0, 0, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y - 1, YACSGL_P_WHITE);
 
