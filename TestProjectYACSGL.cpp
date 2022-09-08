@@ -226,6 +226,26 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 			YACSGL_rect_line(&frame, 170, 170, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y - 1, YACSGL_P_WHITE);
 
+            YACSGL_circle_fill(&frame, VIRTUAL_FRAME_X - 20, 80, 25, YACSGL_P_WHITE);
+
+            YACSGL_circle_fill(&frame, 5, 40, 25, YACSGL_P_WHITE);
+
+            YACSGL_circle_line(&frame, VIRTUAL_FRAME_X - 20, 160, 25, YACSGL_P_WHITE);
+
+            YACSGL_circle_line(&frame, VIRTUAL_FRAME_X - 20, 20, 25, YACSGL_P_WHITE); 
+
+            YACSGL_circle_line(&frame, 0, 0, 10, YACSGL_P_WHITE);
+
+            YACSGL_circle_fill(&frame, 0, 0, 7, YACSGL_P_WHITE);
+
+            YACSGL_circle_fill(&frame, VIRTUAL_FRAME_X - 1, 0, 7, YACSGL_P_WHITE);
+
+            YACSGL_circle_fill(&frame, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y - 1, 7, YACSGL_P_WHITE);
+
+            YACSGL_circle_line(&frame, 0, VIRTUAL_FRAME_Y - 1, 25, YACSGL_P_WHITE);
+
+            YACSGL_circle_fill(&frame, 0, VIRTUAL_FRAME_Y - 1, 7, YACSGL_P_WHITE);
+            
             //YACSGL_rect_fill(&frame, 0, 0, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y - 1, YACSGL_P_WHITE);
 
             //YACSGL_rect_fill(&frame, 0, 0, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y - 1, YACSGL_P_BLACK);
