@@ -191,7 +191,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 
             // TODO: Ajoutez ici le code de dessin qui utilise hdc...
-            YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X-1, VIRTUAL_FRAME_Y-1, YACSGL_P_WHITE);
+            /*YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X-1, VIRTUAL_FRAME_Y-1, YACSGL_P_WHITE);
             YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X / 2, VIRTUAL_FRAME_Y-1, YACSGL_P_WHITE);
             YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X / 3, VIRTUAL_FRAME_Y-1, YACSGL_P_WHITE);
             YACSGL_line(&frame, 0, 0, (VIRTUAL_FRAME_X * 2) / 3, VIRTUAL_FRAME_Y-1, YACSGL_P_WHITE);
@@ -200,7 +200,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X - 1, 0, YACSGL_P_WHITE);
             YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y / 2, YACSGL_P_WHITE);
             YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y / 3, YACSGL_P_WHITE);
-            YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X - 1, (VIRTUAL_FRAME_Y*2) / 3, YACSGL_P_WHITE);
+            YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X - 1, (VIRTUAL_FRAME_Y*2) / 3, YACSGL_P_WHITE);*/
 
             //YACSGL_line(&frame, 0, 0, VIRTUAL_FRAME_X, 0, YACSGL_P_WHITE);
 
@@ -208,7 +208,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             //YACSGL_rect_line(&frame, 0, 0, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y - 1, YACSGL_P_WHITE);
 
-            YACSGL_rect_line(&frame, 10, 10, 19, 19, YACSGL_P_WHITE);
+            YACSGL_font_txt_disp(&frame, 100, 100, YACSGL_P_WHITE, &YACSGL_font_5x7, "This is a test \r with a new line", YACSGL_NEWLINE_DISABLED);
+
+            YACSGL_font_txt_disp(&frame, 0, 130, YACSGL_P_WHITE, &YACSGL_font_5x7, "This is a test \r with a new line", YACSGL_NEWLINE_ENABLED);
+
+
+            /*YACSGL_rect_line(&frame, 10, 10, 19, 19, YACSGL_P_WHITE);
 
             YACSGL_rect_fill(&frame, 30, 30, 39, 39, YACSGL_P_WHITE);
 
@@ -216,7 +221,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             YACSGL_circle_fill(&frame, 80, 80, 30, YACSGL_P_WHITE);
 
-            YACSGL_font_txt_disp(&frame, 100, 100, YACSGL_P_WHITE, &YACSGL_font_5x7, "This is a test", YACSGL_NEWLINE_DISABLED);
+            
 
             YACSGL_rect_line(&frame, 50, 50, 1000, 1000, YACSGL_P_WHITE);
 
@@ -244,7 +249,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             YACSGL_circle_line(&frame, 0, VIRTUAL_FRAME_Y - 1, 25, YACSGL_P_WHITE);
 
-            YACSGL_circle_fill(&frame, 0, VIRTUAL_FRAME_Y - 1, 7, YACSGL_P_WHITE);
+            YACSGL_circle_fill(&frame, 0, VIRTUAL_FRAME_Y - 1, 7, YACSGL_P_WHITE);*/
             
             //YACSGL_rect_fill(&frame, 0, 0, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y - 1, YACSGL_P_WHITE);
 
