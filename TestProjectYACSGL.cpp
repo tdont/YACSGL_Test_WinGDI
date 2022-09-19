@@ -208,11 +208,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             //YACSGL_rect_line(&frame, 0, 0, VIRTUAL_FRAME_X - 1, VIRTUAL_FRAME_Y - 1, YACSGL_P_WHITE);
 
-            YACSGL_font_txt_disp(&frame, 100, 100, YACSGL_P_WHITE, &YACSGL_font_5x7, "This is a test \r with a new line", YACSGL_NEWLINE_DISABLED);
+            YACSGL_font_txt_disp(&frame, 100, 100, YACSGL_P_WHITE, &YACSGL_font_5x7, "This is a test \rwith a new line", YACSGL_NEWLINE_DISABLED);
 
-            YACSGL_font_txt_disp(&frame, 0, 130, YACSGL_P_WHITE, &YACSGL_font_5x7, "This is a test \r with a new line", YACSGL_NEWLINE_ENABLED);
+            YACSGL_font_txt_disp(&frame, 0, 130, YACSGL_P_WHITE, &YACSGL_font_5x7, "This is a test \rwith a new line", YACSGL_NEWLINE_ENABLED);
 
-
+			YACSGL_font_txt_disp(&frame, 240, 130, YACSGL_P_WHITE, &YACSGL_font_5x7, "This is a test \rwith a new line", YACSGL_NEWLINE_ENABLED);
+			YACSGL_font_txt_disp(&frame, 0, 168, YACSGL_P_WHITE, &YACSGL_font_5x7, "This is a test gqp \rwith a new line", YACSGL_NEWLINE_ENABLED);
             /*YACSGL_rect_line(&frame, 10, 10, 19, 19, YACSGL_P_WHITE);
 
             YACSGL_rect_fill(&frame, 30, 30, 39, 39, YACSGL_P_WHITE);
