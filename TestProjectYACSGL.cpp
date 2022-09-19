@@ -6,6 +6,7 @@
 #include "YACSGL.h"
 #include "YACSGL_pixel.h"
 #include "YACSGL_font_5x7.h"
+#include "YACSGL_font_8x16.h"
 #include "YACSGL_font.h"
 
 #define MAX_LOADSTRING 100
@@ -211,6 +212,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             YACSGL_font_txt_disp(&frame, 100, 100, YACSGL_P_WHITE, &YACSGL_font_5x7, "This is a test \rwith a new line", YACSGL_NEWLINE_DISABLED);
 
             YACSGL_font_txt_disp(&frame, 0, 130, YACSGL_P_WHITE, &YACSGL_font_5x7, "This is a test \rwith a new line", YACSGL_NEWLINE_ENABLED);
+            YACSGL_font_txt_disp(&frame, 10, 10, YACSGL_P_WHITE, &YACSGL_font_8x16, "This is a test \rwith a new line", YACSGL_NEWLINE_ENABLED);
 
 			YACSGL_font_txt_disp(&frame, 240, 130, YACSGL_P_WHITE, &YACSGL_font_5x7, "This is a test \rwith a new line", YACSGL_NEWLINE_ENABLED);
 			YACSGL_font_txt_disp(&frame, 0, 168, YACSGL_P_WHITE, &YACSGL_font_5x7, "This is a test gqp \rwith a new line", YACSGL_NEWLINE_ENABLED);
