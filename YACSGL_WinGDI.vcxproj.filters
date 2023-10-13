@@ -24,29 +24,17 @@
     <ClInclude Include="Resource.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="TestProjectYACSGL.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="..\YACSGL\inc\YACSGL.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="..\YACSGL\inc\YACSGL_pixel.h">
+    <ClInclude Include="YACSGL_WinGDI.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TestProjectYACSGL.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\YACSGL\src\YACSGL.c">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\YACSGL\src\YACSGL_pixel.c">
+    <ClCompile Include="YACSGL_WinGDI.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="TestProjectYACSGL.rc">
+    <ResourceCompile Include="YACSGL_WinGDI.rc">
       <Filter>Fichiers de ressources</Filter>
     </ResourceCompile>
   </ItemGroup>
@@ -54,7 +42,7 @@
     <Image Include="small.ico">
       <Filter>Fichiers de ressources</Filter>
     </Image>
-    <Image Include="TestProjectYACSGL.ico">
+    <Image Include="YACSGL_WinGDI.ico">
       <Filter>Fichiers de ressources</Filter>
     </Image>
   </ItemGroup>

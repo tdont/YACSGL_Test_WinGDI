@@ -1,17 +1,17 @@
 //{{NO_DEPENDENCIES}}
 // Fichier Include généré par Microsoft Visual C++.
-// Utilisé par TestProjectYACSGL.rc
+// Utilisé par YACSGL_WinGDI.rc
 
 #define IDS_APP_TITLE			103
 
 #define IDR_MAINFRAME			128
-#define IDD_TESTPROJECTYACSGL_DIALOG	102
+#define IDD_YACSGLWINGDI_DIALOG	102
 #define IDD_ABOUTBOX			103
 #define IDM_ABOUT				104
 #define IDM_EXIT				105
-#define IDI_TESTPROJECTYACSGL			107
+#define IDI_YACSGLWINGDI			107
 #define IDI_SMALL				108
-#define IDC_TESTPROJECTYACSGL			109
+#define IDC_YACSGLWINGDI			109
 #define IDC_MYICON				2
 #ifndef IDC_STATIC
 #define IDC_STATIC				-1
